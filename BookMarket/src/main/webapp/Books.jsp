@@ -25,14 +25,23 @@
 				for(int i=0; i<listOfBooks.size(); i++){   // 리스트배열 크기만큼 반복
 					Book book = listOfBooks.get(i);
 			%>
-			<div class="row-md-4">
-				<h3>[<%=book.getCategory()%>]<%=book.getName() %></h3>
-				<p><%=book.getDescription() %>
-				<p><%=book.getAuthor() %> | <%=book.getPublisher() %> | <%=book.getUnitPrice() %>원
-				<p><a href="./products.jsp?id=<%=book.getBookId() %>"
-				class="btn btn-secondary" role="button">상세 정보 &raquo;</a> <%-- 상세 정보를 클릭했을때 getProductId()가 가져온 정보랑 일치하는 데이터로 이동 --%>
-				<hr>
-			</div>
+			<div class="row">
+  				<div class="col-md-3">
+   					<!-- 이미지를 오른쪽에 배치 -->
+   					<img src="/upload/<%=book.getFilename() %>" style="width: 100%">
+ 				</div>
+ 				<div class="col-md-8">
+   					<!-- 텍스트와 버튼을 왼쪽에 배치 -->
+  					<h3>[<%=book.getCategory()%>]<%=book.getName() %></h3>
+   					<p><%=book.getDescription() %></p>
+   					<p><%=book.getAuthor() %> | <%=book.getPublisher() %> | <%=book.getUnitPrice() %>원</p>
+   				</div>
+   				<div class="col-md-1">
+   					<p><a href="./products.jsp?id=<%=book.getBookId() %>" class="btn btn-secondary" role="button">상세 정보 &raquo;</a></p>
+   				</div>
+   				
+			</div><hr>
+			
 			<% 
 				}
 			%>

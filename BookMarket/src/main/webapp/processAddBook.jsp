@@ -4,7 +4,6 @@
 <%@ page import="dao.BookRepository"%>
 
 <%
-	System.out.println("접속");
 	request.setCharacterEncoding("UTF-8");
 
 	String bookId = request.getParameter("bookId");
@@ -21,7 +20,7 @@
 	
 	Integer price;
 	
-	if(unitPrice.isEmpty() || unitPrice.equals(null))
+	if(unitPrice.isEmpty())
 		price = 0;
 	else
 		price = Integer.valueOf(unitPrice);

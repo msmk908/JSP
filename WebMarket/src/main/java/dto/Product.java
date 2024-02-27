@@ -4,8 +4,6 @@ import java.io.Serializable;
 
 public class Product implements Serializable {
 	
-	private static final long serialBersionUID = -4274700572038677000L;
-	
 	private String productId;
 	private String pname;
 	private Integer unitPrice;

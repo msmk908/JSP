@@ -17,6 +17,6 @@
 	%>
 	<p> 국가 : <%=locale.getDisplayCountry() %>
 	<p> 날짜 : <%=dateFormat.format(currentDate) %>
-	<p> 숫자 (12345.67) : <%=numberFormat.format(12345.67) %>
+	<p> 숫자 (12345.67ddd) : <%=numberFormat.format(12345.67) %>
 </body>
 </html>
